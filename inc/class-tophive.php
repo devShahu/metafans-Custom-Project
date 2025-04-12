@@ -680,6 +680,7 @@ class Tophive {
 
         $files = array(
             '/inc/admin/dashboard.php',
+            '/inc/admin/demo-import-new.php',
         );
 
         foreach( $files as $file ) {

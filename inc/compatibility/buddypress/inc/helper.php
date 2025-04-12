@@ -119,6 +119,8 @@ class Tophive_BP_Helper
 			return 'image';
 		}else if(in_array($ext, $documents_extensions)){
 			return 'document';
+		}else{
+			return 'image';
 		}
 	}
 

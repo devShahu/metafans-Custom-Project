@@ -144,7 +144,6 @@ function metafans_query_vars( $qvars ) {
 }
 add_filter( 'query_vars', 'metafans_query_vars' );
 require_once get_parent_theme_file_path( '/inc/admin/plugins/plugins.php' );
-require_once get_parent_theme_file_path( '/inc/admin/import/import.php' );
 
 
 

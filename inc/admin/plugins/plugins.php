@@ -5,19 +5,6 @@ add_action('tgmpa_register', 'metafans_register_required_plugins');
 function metafans_register_required_plugins() {
 	
 	$plugins = array(
-
-		// Include plugins pre-packaged with the theme
-		array(
-			'name'               => esc_html__('Metafans Core', 'metafans'),
-			'slug'               => 'metafans-core',
-			'source'             => 'https://demo.tophivetheme.com/metafans/wp-content/plugins/metafans-core.zip',
-			'required'           => true,
-			'version'            => '1.0.0',
-			'force_activation'   => false,
-			'force_deactivation' => false,
-			'external_url'       => ''
-		),
-		
 		array(
 			'name'               => esc_html__('Envato Market (theme updates)', 'metafans'),
 			'slug'               => 'envato-market',
@@ -27,35 +14,6 @@ function metafans_register_required_plugins() {
 			'force_deactivation' => false,
 			'external_url'       => ''
 		),
-		// Include plugins from the WordPress Plugin Repository
-		array(
-			'name'               => esc_html__('Elementor', 'metafans'),
-			'slug'               => 'elementor',
-			'required'           => true,
-			'force_activation'   => false,
-			'force_deactivation' => false,
-		),
-		array(
-			'name'               => esc_html__('BBPress', 'metafans'),
-			'slug'               => 'bbpress',
-			'required'           => true,
-			'force_activation'   => false,
-			'force_deactivation' => false,
-		),
-		array(
-			'name'               => esc_html__('Buddypress', 'metafans'),
-			'slug'               => 'buddypress',
-			'required'           => true,
-			'source'             => 'https://downloads.wordpress.org/plugin/buddypress.14.0.0.zip',
-		),
-
-		// array(
-		// 	'name'               => esc_html__('Directorist', 'metafans'),
-		// 	'slug'               => 'directorist',
-		// 	'required'           => false,
-		// 	'force_activation'   => false,
-		// 	'force_deactivation' => false,
-		// ),
 	);
 
 	$config = array(

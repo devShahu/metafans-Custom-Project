@@ -511,7 +511,7 @@ class Tophive_BP_Activity
 						$html .= '<div class="activity-extension-links">';
 							$html .= '<span class="open-button">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-									<path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+									<path d="M3 9.5	a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
 								</svg>
 							</span>';
 							$html .= '<span class="more-option">'. esc_html__("More Options", "metafans") . '</span>';
@@ -766,6 +766,7 @@ class Tophive_BP_Activity
 	public function activity_media_html( $activity_id ){
 		$media = bp_activity_get_meta( $activity_id, 'activity_media', true );
 
+		
 		if(!empty( $media )){
 
 			if( count($media) == 1 ){
@@ -784,7 +785,9 @@ class Tophive_BP_Activity
 			$remaining = count($media) - 4;
 
 				foreach ($media as $media_url) {
+					
 					$media_type = $this->helper->get_media_type( $media_url['full'] );
+
 						if( $media_type == 'video' ){
 							$media_html .= '<div class="" id="'. $i .'">';
 							$media_html .= '<video controls width="100%"><source src="'. $media_url['full'] .'" alt=""></video>';

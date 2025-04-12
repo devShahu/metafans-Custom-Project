@@ -246,7 +246,12 @@ class Tophive_Post_Entry {
 		if ( get_post_type() === $this->post_type ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = $this->get_terms_list( $this->get_post_id(), $this->config['tax'], true );
-			$html .= sprintf( '<span class="meta-item meta-cat">%1$s</span>', join( $this->config['term_sep'], $categories_list ) ); // WPCS: XSS OK.
+			if ( is_array( $categories_list ) && ! empty( $categories_list ) ) {
+				$html .= sprintf(
+					'<span class="meta-item meta-cat">%1$s</span>',
+					join( $this->config['term_sep'], $categories_list )
+				); // WPCS: XSS OK.
+			}
 		}
 		return $html;
 	}

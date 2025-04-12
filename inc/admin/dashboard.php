@@ -22,12 +22,9 @@ class Tophive_Dashboard {
 			self::$_instance->welcome_head = esc_html__( 'Welcome to MetaFans by Tophive', 'metafans' );
 			self::$_instance->title = esc_html__( 'MetaFans', 'metafans' );
 
-			if( !class_exists('WP_Importer') ){
-				require_once( ABSPATH . 'wp-admin/includes/class-wp-importer.php' );				
-			}
-			if( !class_exists( 'Advanced_Import' ) ){
-				require_once( 'import/advanced-import/advanced-import.php' );				
-			}
+			// if( !class_exists('WP_Importer') ){
+			// 	require_once( ABSPATH . 'wp-admin/includes/class-wp-importer.php' );				
+			// }
 
 			add_action( 'admin_menu', array( self::$_instance, 'add_menu_page' ), 5 );
 			add_action( 'admin_enqueue_scripts', array( self::$_instance, 'scripts' ) );
@@ -509,7 +506,7 @@ class Tophive_Dashboard {
 			// ),
 			array(
 				'name' => esc_html__( 'Import Demo', 'metafans' ),
-				'url' => admin_url('themes.php?page=advanced-import'), 
+				'url' => admin_url('themes.php?page=bp-demo-import'), 
 				'slug' => 'importer', 
 				'target' => '_self' 
 			),
